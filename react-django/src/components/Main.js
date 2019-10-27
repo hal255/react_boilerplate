@@ -1,10 +1,23 @@
 import React from 'react';
-import logo from './resources/art-assets/logo.svg';
-import './App.css';
+import logo from '../resources/art-assets/logo.svg';
+import '../App.css';
 
-function App() {
+function Main() {
+  let class_name = "Main_";
+  let result = [];
+  let i = 0;
+  while (i < 5){
+    class_name = "Main_" + i;
+    result.push(main_helper(class_name));
+    i++;
+  }
+
+  return result;
+}
+
+function main_helper(class_name){
   return (
-    <div className="App">
+    <div className={class_name}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -23,4 +36,4 @@ function App() {
   );
 }
 
-export default App;
+export default Main;
