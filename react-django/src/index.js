@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Main from './components/Main';
 import * as serviceWorker from './serviceWorker';
 
-//ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<Main />, document.getElementById('root'));
+import 'bootstrap/dist/css/bootstrap.min.css';  // import bootstrap style sheet
+
+
+// multiple renders will display over each other, so keep just one
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
