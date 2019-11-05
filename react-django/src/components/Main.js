@@ -1,12 +1,11 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
 
 import MyNavBar from './TestNavBar.js';
 import ImgLinks from './ImgLinks.js';
 
 // main brings in all components together
 function Main() {
-  let id = "img-links";
   let helper = main_helper();
   return (
     <Container>
@@ -16,10 +15,14 @@ function Main() {
 }
 
 function main_helper() {
+  let my_classes = [MyNavBar(), ImgLinks()]
   let result = [];
-  result.push(MyNavBar());
-  result.push(ImgLinks());
-  result.push(<hr />);
+  result.push(my_classes[0]); // push first element without horizontal line
+  var i = 0;
+  for(i = 1; i < my_classes.length; i++){
+    result.push(my_classes[i]);
+    result.push(<hr />);
+  }
   return result;
 }
 
