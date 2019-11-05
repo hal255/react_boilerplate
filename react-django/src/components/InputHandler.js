@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FormControl from 'react-bootstrap/FormControl';
+//import InputGroup from 'react-bootstrap/InputGroup';
+//import FormControl from 'react-bootstrap/FormControl';
 
 function Input() {
   let id = "input_handler";
